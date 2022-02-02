@@ -4,7 +4,7 @@ import {Mensaje} from "../components/Mensaje"
 import { useState } from 'react';
 import { useEffect } from 'react/cjs/react.development';
 
-export const Modal = ({setModal, animarModal, setAnimarModal, guardarGasto, gastoEditar, setGastos, gastos}) => {
+export const Modal = ({setModal, setGastoEditar, animarModal, setAnimarModal, guardarGasto, gastoEditar, setGastos, gastos}) => {
 
   useEffect(() => {
     if(Object.keys(gastoEditar).length > 0){
@@ -19,8 +19,10 @@ export const Modal = ({setModal, animarModal, setAnimarModal, guardarGasto, gast
 
     const ocultarModal = () => {
         setAnimarModal(false)
+        
         setTimeout(() => {
             setModal(false)
+            setGastoEditar({})
           }, 300)
     }
 
