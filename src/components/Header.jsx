@@ -3,11 +3,11 @@ import { ControlPresupuesto } from './ControlPresupuesto';
 import { NuevoPresupuesto } from './NuevoPresupuesto';
 
 
-export const Header = ({presupuesto, setPresupuesto, isValidPresupuesto, setIsValidPresupuesto, gastos}) => {
+export const Header = ({presupuesto, setGastos, setPresupuesto, isValidPresupuesto, setIsValidPresupuesto, gastos}) => {
   return (
   <header>
       <h1>Planificador de Gastos</h1>
-      {isValidPresupuesto ? <ControlPresupuesto gastos={gastos} presupuesto={presupuesto}/> : 
+      {isValidPresupuesto ? <ControlPresupuesto setPresupuesto={setPresupuesto} setGastos={setGastos} gastos={gastos} presupuesto={presupuesto} setIsValidPresupuesto={setIsValidPresupuesto}/> : 
       <NuevoPresupuesto
       presupuesto={presupuesto}
       setPresupuesto={setPresupuesto}

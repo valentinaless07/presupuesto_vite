@@ -103,6 +103,7 @@ const [gastosFiltrados, setgastosFiltrados] = useState([]);
       isValidPresupuesto={isValidPresupuesto}
       setIsValidPresupuesto={setIsValidPresupuesto}
       gastos={gastos}
+      setGastos={setGastos}
       />
       {isValidPresupuesto && (
         <>
